@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container text-center py-5">
+        <a href="/student/addStudent" class="btn btn-primary">New Student</a> | 
+        <a href="/Department" class="btn btn-primary">Department Data</a>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Operation</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ID</td>
+                        <td>@item.Name</td>
+                        <td>@item.Age</td>
+                        <td>
+                            <a href="/student/Update/@item.ID" class="btn btn-dark">Edit Student</a> |
+                            <a href="/student/Details/@item.ID" class="btn btn-warning">Student Details</a> |
+                            <a href="/student/Delete/@item.ID" class="btn btn-danger">Delete Student</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

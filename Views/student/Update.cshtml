@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container text-center">
+        <form method="Post">
+            <input class="form-control" type="Text" name="ID" value="@Model.ID" />
+            <input class="form-control" type="Text" name="Name" value="@Model.Name" />
+            <input class="form-control" type="Text" name="Age" value="@Model.Age" />
+            <input class="btn btn-primary" type="submit" value="Update" />
+        </form>
+    </div>
+</body>
+</html>
